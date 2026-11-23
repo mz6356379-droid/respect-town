@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100b18">
+<title>Respect Town | RT</title>
+<style>
+:root{--bg:#0b0910;--panel:#15111d;--panel2:#1d1728;--purple:#9b5cff;--purple2:#6d35c7;--text:#f5f0ff;--muted:#b8adc8;--line:#30243f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#28153e 0,transparent 38%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0b0910eF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{font-weight:900;letter-spacing:1px;font-size:20px}.brand span{color:var(--purple)}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}nav a{font-size:13px;color:var(--muted)}nav a:hover{color:white}
+.menu{display:none;background:var(--panel2);border:1px solid var(--line);color:white;padding:8px 12px;border-radius:10px}
+.hero{padding:82px 0 60px;text-align:center}.eyebrow{display:inline-block;color:#d8c2ff;border:1px solid #67439a;background:#241536;padding:5px 14px;border-radius:99px;font-size:12px}
+h1{font-size:clamp(36px,7vw,66px);line-height:1.2;margin:22px 0 12px;font-weight:900}h1 span{color:var(--purple)}.hero p{color:var(--muted);max-width:650px;margin:0 auto 26px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:11px 20px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--purple2));font-weight:700;border:1px solid #a77aff}.btn.secondary{background:var(--panel);border-color:var(--line);color:var(--text)}
+section{padding:34px 0 54px}.section-head{text-align:center;margin-bottom:24px}.section-head h2{font-size:28px;margin:0 0 5px}.section-head p{margin:0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:20px;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#7650a6}.icon{width:42px;height:42px;border-radius:12px;background:#33204c;color:#d5b8ff;display:grid;place-items:center;font-size:21px;margin-bottom:12px}.card h3{margin:0 0 5px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:13px}.tag{display:inline-block;margin-top:13px;color:#d8c2ff;font-size:12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.notice{color:var(--muted);font-size:13px;margin-top:10px}
+.rule-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.rule{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px}.rule b{display:block;margin-bottom:3px}.rule span{font-size:13px;color:var(--muted)}
+details{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin:10px 0}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);font-size:13px;margin-bottom:0}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px;text-align:center}
+.lang{border:1px solid var(--line);background:var(--panel);color:white;border-radius:10px;padding:8px 11px;cursor:pointer}
+[dir=ltr] body{text-align:left}[dir=ltr] .hero{text-align:center}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}nav{display:none;position:absolute;top:65px;right:4%;left:4%;background:var(--panel);padding:16px;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:stretch}.menu{display:block}nav.open{display:flex}.nav{flex-wrap:wrap}.rule-list{grid-template-columns:1fr}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}.hero{padding:58px 0 40px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">RESPECT <span>TOWN</span> <small style="font-size:11px;color:#b8adc8">| RT</small></a>
+  <button class="menu" id="menuBtn" aria-label="فتح القائمة">☰</button>
+  <nav id="navLinks">
+    <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="#sections" data-ar="الأقسام" data-en="Sections">الأقسام</a>
+    <a href="#rules" data-ar="القوانين" data-en="Rules">القوانين</a>
+    <a href="#faq" data-ar="الأسئلة" data-en="FAQ">الأسئلة</a>
+    <a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a>
+  </nav>
+  <button class="lang" id="langBtn">English</button>
+</div></header>
+
+<main>
+<section class="hero wrap" id="home">
+  <span class="eyebrow" data-ar="مرحباً بك في عالم ريسبيكت" data-en="WELCOME TO RESPECT TOWN">مرحباً بك في عالم ريسبيكت</span>
+  <h1>RESPECT <span>TOWN</span></h1>
+  <p data-ar="الموقع الرسمي لقوانين وتعليمات مدينة Respect Town. اقرأ الأنظمة قبل المشاركة، وتابع آخر التحديثات من مكان واحد." data-en="The official guide to Respect Town rules and information. Read the guidelines before joining and find important updates in one place.">الموقع الرسمي لقوانين وتعليمات مدينة Respect Town. اقرأ الأنظمة قبل المشاركة، وتابع آخر التحديثات من مكان واحد.</p>
+  <div class="actions"><a class="btn" href="#rules" data-ar="استعرض القوانين" data-en="Explore the rules">استعرض القوانين</a><a class="btn secondary" href="#sections" data-ar="تصفح الأقسام" data-en="Browse sections">تصفح الأقسام</a></div>
+</section>
+
+<section class="wrap" id="sections">
+ <div class="section-head"><h2 data-ar="أقسام المدينة" data-en="Town Sections">أقسام المدينة</h2><p data-ar="كل ما تحتاجه للوصول إلى المعلومات المهمة." data-en="Everything you need, organized in one place.">كل ما تحتاجه للوصول إلى المعلومات المهمة.</p></div>
+ <div class="grid">
+  <a class="card" href="#rules"><div class="icon">📜</div><h3 data-ar="القوانين العامة" data-en="General Rules">القوانين العامة</h3><p data-ar="التعليمات الأساسية لجميع أعضاء المدينة." data-en="Essential guidelines for everyone in the community.">التعليمات الأساسية لجميع أعضاء المدينة.</p><span class="tag" data-ar="عرض التفاصيل ←" data-en="View details →">عرض التفاصيل ←</span></a>
+  <a class="card" href="#police"><div class="icon">👮</div><h3 data-ar="قوانين الشرطة" data-en="Police Rules">قوانين الشرطة</h3><p data-ar="مسؤوليات وتعليمات القطاع الأمني." data-en="Guidelines and responsibilities for law enforcement.">مسؤوليات وتعليمات القطاع الأمني.</p><span class="tag" data-ar="عرض التفاصيل ←" data-en="View details →">عرض التفاصيل ←</span></a>
+  <a class="card" href="#ems"><div class="icon">🚑</div><h3 data-ar="قوانين الإسعاف" data-en="EMS Rules">قوانين الإسعاف</h3><p data-ar="تنظيم العمل الطبي والتعامل مع البلاغات." data-en="Medical service and emergency response guidelines.">تنظيم العمل الطبي والتعامل مع البلاغات.</p><span class="tag" data-ar="عرض التفاصيل ←" data-en="View details →">عرض التفاصيل ←</span></a>
+  <a class="card" href="#gangs"><div class="icon">🛡️</div><h3 data-ar="قوانين العصابات" data-en="Gang Rules">قوانين العصابات</h3><p data-ar="ضوابط التنظيمات والتفاعل داخل المدينة." data-en="Rules for groups and roleplay interactions.">ضوابط التنظيمات والتفاعل داخل المدينة.</p><span class="tag" data-ar="عرض التفاصيل ←" data-en="View details →">عرض التفاصيل ←</span></a>
+  <a class="card" href="#applications"><div class="icon">📝</div><h3 data-ar="التقديمات والتفعيل" data-en="Applications">التقديمات والتفعيل</h3><p data-ar="معلومات التقديم ومتطلبات الانضمام." data-en="Application information and joining requirements.">معلومات التقديم ومتطلبات الانضمام.</p><span class="tag" data-ar="عرض التفاصيل ←" data-en="View details →">عرض التفاصيل ←</span></a>
+  <a class="card" href="#staff"><div class="icon">⭐</div><h3 data-ar="الإدارة" data-en="Administration">الإدارة</h3><p data-ar="التعريف بفريق الإدارة ومسؤولياته." data-en="Meet the administration team and its responsibilities.">التعريف بفريق الإدارة ومسؤولياته.</p><span class="tag" data-ar="عرض التفاصيل ←" data-en="View details →">عرض التفاصيل ←</span></a>
+ </div>
+</section>
+
+<section class="wrap" id="rules">
+ <div class="section-head"><h2 data-ar="القوانين العامة" data-en="General Rules">القوانين العامة</h2><p data-ar="هذه مساحة مبدئية؛ استبدل النصوص بالقوانين الرسمية المعتمدة في سيرفرك." data-en="Starter content. Replace these examples with your server's approved rules.">هذه مساحة مبدئية؛ استبدل النصوص بالقوانين الرسمية المعتمدة في سيرفرك.</p></div>
+ <div class="panel"><div class="rule-list">
+  <div class="rule"><b data-ar="الاحترام المتبادل" data-en="Mutual Respect">الاحترام المتبادل</b><span data-ar="احترم جميع الأعضاء والإدارة، وابتعد عن الإساءة والاستفزاز." data-en="Treat all members and staff respectfully.">احترم جميع الأعضاء والإدارة، وابتعد عن الإساءة والاستفزاز.</span></div>
+  <div class="rule"><b data-ar="اتباع التعليمات" data-en="Follow Guidelines">اتباع التعليمات</b><span data-ar="التزم بالتعليمات والإعلانات الرسمية الصادرة من الإدارة." data-en="Follow official instructions and announcements.">التزم بالتعليمات والإعلانات الرسمية الصادرة من الإدارة.</span></div>
+  <div class="rule"><b data-ar="منع استغلال الثغرات" data-en="No Exploits">منع استغلال الثغرات</b><span data-ar="يمنع استغلال الأخطاء أو الأنظمة للحصول على أفضلية غير عادلة." data-en="Do not exploit bugs or systems for unfair advantages.">يمنع استغلال الأخطاء أو الأنظمة للحصول على أفضلية غير عادلة.</span></div>
+  <div class="rule"><b data-ar="التزم بتجربة RP" data-en="Roleplay Quality">التزم بتجربة RP</b><span data-ar="حافظ على تفاعل واقعي ومتناسق مع أحداث المدينة." data-en="Keep interactions consistent with the roleplay environment.">حافظ على تفاعل واقعي ومتناسق مع أحداث المدينة.</span></div>
+ </div><p class="notice" data-ar="ملاحظة: النصوص أعلاه أمثلة أولية وليست قوانين رسمية نهائية." data-en="Note: These are starter examples, not your final official rules.">ملاحظة: النصوص أعلاه أمثلة أولية وليست قوانين رسمية نهائية.</p></div>
+</section>
+
+<section class="wrap" id="police"><div class="section-head"><h2>👮 <span data-ar="قوانين الشرطة" data-en="Police Rules">قوانين الشرطة</span></h2></div><div class="panel"><p data-ar="أضف هنا قوانين الشرطة، الرتب، الصلاحيات، وإجراءات التعامل مع البلاغات." data-en="Add police rules, ranks, permissions, and dispatch procedures here.">أضف هنا قوانين الشرطة، الرتب، الصلاحيات، وإجراءات التعامل مع البلاغات.</p></div></section>
+<section class="wrap" id="ems"><div class="section-head"><h2>🚑 <span data-ar="قوانين الإسعاف" data-en="EMS Rules">قوانين الإسعاف</span></h2></div><div class="panel"><p data-ar="أضف هنا قوانين الإسعاف، آلية استقبال الحالات، وأوقات الخدمة." data-en="Add EMS rules, patient handling guidance, and service procedures here.">أضف هنا قوانين الإسعاف، آلية استقبال الحالات، وأوقات الخدمة.</p></div></section>
+<section class="wrap" id="gangs"><div class="section-head"><h2>🛡️ <span data-ar="قوانين العصابات" data-en="Gang Rules">قوانين العصابات</span></h2></div><div class="panel"><p data-ar="أضف هنا قوانين العصابات والتنظيمات وشروط اعتمادها." data-en="Add gang and organization rules and approval requirements here.">أضف هنا قوانين العصابات والتنظيمات وشروط اعتمادها.</p></div></section>
+<section class="wrap" id="applications"><div class="section-head"><h2>📝 <span data-ar="التقديمات والتفعيل" data-en="Applications">التقديمات والتفعيل</span></h2></div><div class="panel"><p data-ar="ضع هنا روابط التقديم والتفعيل الرسمية الخاصة بسيرفر الديسكورد." data-en="Place your official Discord application and activation links here.">ضع هنا روابط التقديم والتفعيل الرسمية الخاصة بسيرفر الديسكورد.</p><p class="notice" data-ar="لم تتم إضافة روابط تقديم حتى الآن." data-en="No application links have been added yet.">لم تتم إضافة روابط تقديم حتى الآن.</p></div></section>
+<section class="wrap" id="staff"><div class="section-head"><h2>⭐ <span data-ar="الإدارة" data-en="Administration">الإدارة</span></h2></div><div class="panel"><p data-ar="أضف أسماء المؤسسين والإدارة والرتب هنا بعد اعتماد القائمة." data-en="Add founder, management, and staff names here once the list is confirmed.">أضف أسماء المؤسسين والإدارة والرتب هنا بعد اعتماد القائمة.</p></div></section>
+<section class="wrap" id="faq"><div class="section-head"><h2 data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h2></div>
+ <details><summary data-ar="أين أجد القوانين؟" data-en="Where can I find the rules?">أين أجد القوانين؟</summary><p data-ar="يمكنك تصفح الأقسام من قائمة الموقع." data-en="Browse the sections using the website menu.">يمكنك تصفح الأقسام من قائمة الموقع.</p></details>
+ <details><summary data-ar="هل القوانين قابلة للتحديث؟" data-en="Can the rules be updated?">هل القوانين قابلة للتحديث؟</summary><p data-ar="نعم، يمكن لمسؤول الموقع تعديل الملف ونشر النسخة الجديدة." data-en="Yes. The website owner can edit the files and publish an updated version.">نعم، يمكن لمسؤول الموقع تعديل الملف ونشر النسخة الجديدة.</p></details>
+</section>
+<section class="wrap" id="contact"><div class="section-head"><h2 data-ar="التواصل" data-en="Contact">التواصل</h2><p data-ar="أضف رابط دعوة ديسكورد الرسمي هنا." data-en="Add your official Discord invite link here.">أضف رابط دعوة ديسكورد الرسمي هنا.</p></div><div class="actions"><a class="btn secondary" href="#" onclick="alert(document.documentElement.lang==='ar'?'أضف رابط دعوة الديسكورد داخل ملف index.html أولاً.':'Add your Discord invite URL in index.html first.');return false" data-ar="دخول الديسكورد" data-en="Join Discord">دخول الديسكورد</a></div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> RESPECT TOWN | RT — <span data-ar="جميع الحقوق محفوظة." data-en="All rights reserved.">جميع الحقوق محفوظة.</span></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+let english=false;
+document.getElementById('langBtn').addEventListener('click',()=>{
+ english=!english;document.documentElement.lang=english?'en':'ar';document.documentElement.dir=english?'ltr':'rtl';
+ document.getElementById('langBtn').textContent=english?'العربية':'English';
+ document.querySelectorAll('[data-ar]').forEach(el=>el.textContent=english?el.dataset.en:el.dataset.ar);
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
